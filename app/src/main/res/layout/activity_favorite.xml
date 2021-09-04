@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".favorite"
+    android:id="@+id/coordinate"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/lmain"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Playlists"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/favorites"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text=""
+          android:id="@+id/noofsongs"
+        android:layout_marginLeft="20dp"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/search"
+        android:hint="Search"
+        android:nextFocusUp="@id/search"
+        android:nextFocusDown="@id/search"
+        android:textSize="18sp"
+        android:drawableEnd="@drawable/search"
+        android:drawablePadding="15dp"
+        android:singleLine="true"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="#D7252323"
+        android:layout_marginBottom="20dp"
+        />
+    <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+        android:layout_width="match_parent"
+        android:id="@+id/fastscroller"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        app:fastScrollEnabled="true"
+        app:popupDrawable="@drawable/my_scroll"
+        app:handleHeight="30dp"
+        app:handleWidth="20dp"
+        app:popupPosition="beforeTrack"
+        app:handleVisibilityDuration="1000"
+        >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listViewHeroes"
+        android:divider="@null"
+        android:visibility="visible"
+       android:layout_marginRight="0dp"
+        android:scrollbars="none"
+        />
+    </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/nosong"
+        android:visibility="gone"
+        android:id="@+id/nosong"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+
+        />
+</LinearLayout>
+
+    <include layout="@layout/bottomsheet" android:id="@+id/bottom"   />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

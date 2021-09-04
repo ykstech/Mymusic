@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/one" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/one"
+            app:layout_editor_absoluteY="560dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.33"
+            android:scaleX="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content" />
+        <Constraint
+            app:layout_constraintVertical_bias="0.693"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/splash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/two" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" >
+        <KeyFrameSet >
+            <KeyAttribute
+                app:motionTarget="@+id/two"
+                app:framePosition="0"
+                android:scaleX="0" />
+        </KeyFrameSet>
+        <OnClick app:targetId="@id/splash" />
+    </Transition>
+</MotionScene>

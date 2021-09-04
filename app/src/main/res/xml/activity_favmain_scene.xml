@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/lmainfm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="84dp"
+            android:id="@+id/imagecard" />
+        <Constraint
+            android:id="@+id/playimage"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toTopOf="@+id/imagecard"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="100dp" />
+        <Constraint
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.935"
+            app:layout_constraintTop_toBottomOf="@+id/imagecard"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="270dp"
+            android:id="@+id/fastscroller2" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/lmainfm" />
+        <Constraint
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/imagecard" />
+        <Constraint
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imagecard"
+            app:layout_constraintHorizontal_bias="0.824"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="80dp"
+            android:id="@+id/playimage"
+            android:layout_marginTop="12dp" />
+        <Constraint
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.935"
+            app:layout_constraintTop_toBottomOf="@+id/imagecard"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="120dp"
+            android:id="@+id/fastscroller2" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" >
+
+        <OnSwipe app:touchAnchorId="@+id/fastscroller2" />
+        <KeyFrameSet >
+            <KeyAttribute
+                app:motionTarget="@+id/imagecard"
+                app:framePosition="100"
+                android:scaleX="1" />
+            <KeyAttribute
+                app:motionTarget="@+id/imagecard"
+                app:framePosition="100"
+                android:scaleY="1" />
+        </KeyFrameSet>
+
+
+    </Transition>
+</MotionScene>

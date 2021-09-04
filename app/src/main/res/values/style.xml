@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="CustomShapeAppearance">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">115dp</item>
+
+        <!-- Or if wants different radii depending on the corner. -->
+        <item name="neumorph_cornerSizeTopLeft">115dp</item>
+        <item name="neumorph_cornerSizeTopRight">115dp</item>
+        <item name="neumorph_cornerSizeBottomLeft">115dp</item>
+        <item name="neumorph_cornerSizeBottomRight">115dp</item>
+    </style>
+    <style name="CustomShapeAppearance2">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">0dp</item>
+
+        <!-- Or if wants different radii depending on the corner. -->
+<!--        <item name="neumorph_cornerSizeTopLeft">115dp</item>-->
+<!--        <item name="neumorph_cornerSizeTopRight">115dp</item>-->
+<!--        <item name="neumorph_cornerSizeBottomLeft">115dp</item>-->
+<!--        <item name="neumorph_cornerSizeBottomRight">115dp</item>-->
+    </style>
+
+
+    <style name="NeumorphismCardImage">
+
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_115sdp</item>
+    </style>
+
+</resources>

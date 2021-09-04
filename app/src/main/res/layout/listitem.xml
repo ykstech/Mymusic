@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soup.neumorphism.NeumorphCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:neumorph_shadowColorDark="#303030"
+    app:neumorph_shadowColorLight="#303030"
+    style="@style/Widget.Neumorph.CardView"
+    app:neumorph_shapeType="flat"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+android:id="@+id/main"
+
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="7.5dp"
+    android:layout_marginBottom="7.5dp"
+
+    >
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text=""
+        android:padding="6dp"
+        android:singleLine="true"
+        android:layout_alignParentStart="true"
+
+
+
+        />
+    <TextView
+        android:id="@+id/txtsongname"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text=""
+        android:padding="6dp"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/number"
+        android:layout_marginEnd="27dp"
+
+
+        />
+<!--    <com.gauravk.audiovisualizer.visualizer.BarVisualizer-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--       android:layout_marginLeft="5dp"-->
+
+<!--        xmlns:custom="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/bar"-->
+<!--        custom:avDensity="0.8"-->
+<!--        custom:avType="outline"-->
+<!--        custom:avWidth="4dp"-->
+<!--        custom:avColor="#F54678"-->
+<!--        custom:avSpeed="normal"/>-->
+<!--    <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/radio"-->
+
+<!--        />-->
+
+    <eu.gsottbauer.equalizerview.EqualizerView
+        android:id="@+id/equalizer"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_width="25dp"
+        android:layout_height="10dp"
+        app:marginLeft="1dp"
+        app:marginRight="1dp"
+        app:barColor="#F54678"
+        app:barCount="4"
+
+        app:barWidth="2dp"
+        app:runInBatterySaveMode="true" />
+
+
+</RelativeLayout>
+
+</soup.neumorphism.NeumorphCardView>

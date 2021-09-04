@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".favmain"
+    android:id="@+id/motion"
+    app:layoutDescription="@xml/activity_favmain_scene"
+    >
+
+
+    <TextView
+        android:id="@+id/favm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Favorites"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/favn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="16 Playlists"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favm" />
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/imagecard"
+        style="@style/Widget.Neumorph.ImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/favn"
+        android:layout_marginTop="100dp"
+
+
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+        app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+       android:src="@drawable/cloth"
+        >
+
+<!--        <com.makeramen.roundedimageview.RoundedImageView-->
+<!--            android:id="@+id/album_artfm"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="@dimen/_2sdp"-->
+<!--            android:src="@drawable/yash"-->
+
+<!--            app:riv_oval="false" />-->
+
+
+    </soup.neumorphism.NeumorphImageView>
+    <soup.neumorphism.NeumorphImageButton
+        android:id="@+id/playimage"
+        style="@style/Widget.Neumorph.ImageButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/favm"
+        android:scaleType="centerInside"
+        android:src="@drawable/play"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imagecard"
+        app:neumorph_backgroundColor="@color/favm"
+        app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+        />
+<!--        app:neumorph_shadowColorLight="@color/favm" -->
+
+
+    <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+        android:id="@+id/fastscroller2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fastScrollEnabled="true"
+        app:handleHeight="30dp"
+        app:handleVisibilityDuration="1000"
+        app:handleWidth="20dp"
+       android:layout_marginTop="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagecard"
+        app:layout_constraintVertical_bias="0.935"
+        app:popupDrawable="@drawable/my_scroll"
+        app:popupPosition="beforeTrack">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listViewHeroes2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+    </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

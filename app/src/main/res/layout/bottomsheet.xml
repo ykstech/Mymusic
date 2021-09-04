@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:backgroundTint="#292626"
+    android:background="@drawable/bottomsheetbg"
+
+    android:padding="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_peekHeight="85dp"
+    app:behavior_hideable="false"
+    android:id="@+id/design_bottom_sheet"
+
+    >
+        <RelativeLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/top"
+            android:padding="0dp"
+                >
+
+<!--            <soup.neumorphism.NeumorphCardView-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:layout_marginLeft="0dp"-->
+<!--                android:layout_marginRight="0dp"-->
+<!--                android:layout_marginBottom="0dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:id="@+id/seekbarcardview2"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"-->
+<!--                app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"-->
+<!--                app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"-->
+<!--                app:neumorph_shapeType="pressed"-->
+<!--                >-->
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:layout_width="match_parent"
+                    android:id="@+id/seekbarcardview2"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                    android:paddingTop="0dp"
+                    android:layout_marginBottom="0dp"
+                                android:paddingStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginRight="0dp"
+                                android:paddingEnd="0dp"
+                                android:progress="0"
+                                android:splitTrack="false"
+                                android:maxHeight="@dimen/_6sdp"
+                                android:progressDrawable="@drawable/progressbackground"
+                                android:layout_margin="0dp"
+                    android:thumbOffset="0dp"
+                    android:thumbTint="@android:color/transparent"
+
+                    />
+<!--                                android:thumb="@drawable/thumb"-->
+
+            <!--            </soup.neumorphism.NeumorphCardView>-->
+
+
+            <TextView
+                android:layout_below="@+id/seekbarcardview2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Loading..."
+             android:clickable="true"
+            android:id="@+id/name"
+
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            />
+
+            <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+
+            android:textSize="10sp"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="20dp"
+             android:clickable="true"
+            android:text=""
+
+           android:id="@+id/artist"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:ellipsize="marquee"
+                android:scrollHorizontally="true"
+
+            />
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/back"
+            android:layout_toLeftOf="@id/play"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerInside"
+            app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+            app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+            android:layout_below="@+id/seekbarcardview2"
+
+            android:src="@drawable/ic_baseline_fast_rewind_24"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:neumorph_shapeType="flat" />
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/play"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="60dp"
+            android:layout_toLeftOf="@id/next"
+            android:layout_below="@+id/seekbarcardview2"
+            android:layout_height="60dp"
+            app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+            app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:neumorph_shapeType="flat"
+            />
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/next"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_alignParentRight="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerInside"
+            android:layout_marginTop="0dp"
+            app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+            app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+            android:layout_below="@+id/seekbarcardview2"
+
+            android:src="@drawable/ic_baseline_fast_forward_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:neumorph_shapeType="flat" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottom1"
+            android:alpha="0"
+            android:visibility="gone"
+                >
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/left"
+
+                    style="@style/Widget.Neumorph.ImageButton"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="center"
+                    android:layout_marginTop="0dp"
+                    app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+                    android:layout_alignParentTop="true"
+
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    app:neumorph_shapeType="flat" />
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/flat_menu"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:focusable="true"
+
+                app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+                app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+                >
+            <com.fangxu.allangleexpandablebutton.AllAngleExpandableButton
+                android:id="@+id/button_expandable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:aebAnimDurationMillis="175"
+                app:aebButtonElevation="4dp"
+                app:aebButtonGapDp="30dp"
+                app:aebIsSelectionMode="false"
+                app:aebMainButtonRotateAnimDurationMillis="175"
+                app:aebMainButtonRotateDegree="-135"
+                app:aebMainButtonSizeDp="29dp"
+                app:aebMainButtonTextColor="#ffff5656"
+                app:aebMainButtonTextSizeSp="20dp"
+
+                 app:aebRippleColor="#EF0B0B"
+                app:aebRippleEffect="false"
+                app:aebStartAngleDegree="180"
+                app:aebEndAngleDegree="270"
+                app:aebSubButtonSizeDp="40dp"
+                app:aebSubButtonTextColor="#ff0000ff"
+                app:aebSubButtonTextSizeSp="18dp"
+                app:aebBlurBackground="true"
+                app:aebBlurRadius="10"
+            />
+            </soup.neumorphism.NeumorphCardView>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="20dp"
+                    android:text="PLAYING NOW"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="34dp"
+                    android:layout_alignParentTop="true"
+
+
+                    />
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_below="@+id/left"
+                    android:id="@+id/image"
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:layout_centerHorizontal="true"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+
+                    >
+              <com.makeramen.roundedimageview.RoundedImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                      android:layout_margin="@dimen/_2sdp"
+                      android:src="@mipmap/cloth_foreground"
+                      app:riv_oval="true"
+                  android:id="@+id/album_art"
+                      />
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                   android:layout_marginRight="50dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+
+                    android:id="@+id/namemain"
+                    android:layout_below="@+id/image"
+                       android:clickable="false"
+                     android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="0dp"
+                    android:text=""
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:id="@+id/subname"
+                    android:layout_below="@+id/namemain"
+
+                    android:singleLine="true"
+
+
+                    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginTop="30dp"
+                android:text="0:00"
+                android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                android:id="@+id/timer"
+                android:layout_below="@+id/subname"
+                 android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginTop="30dp"
+                android:text=""
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:id="@+id/timerfull"
+                android:layout_below="@+id/subname"
+                android:layout_alignParentRight="true"
+                />
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_below="@+id/timer"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/seekbarcardview"
+                android:layout_centerHorizontal="true"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+                app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+                app:neumorph_shapeType="pressed"
+                >
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:layout_width="match_parent"
+                        android:id="@+id/seekbar"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:paddingStart="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingEnd="0dp"
+                        android:progress="0"
+                        android:splitTrack="false"
+                        android:maxHeight="@dimen/_6sdp"
+                        android:progressDrawable="@drawable/progressbackground"
+
+                        android:thumb="@drawable/thumb"
+                        android:thumbOffset="0dp"
+                            />
+            </soup.neumorphism.NeumorphCardView>
+            <soup.neumorphism.NeumorphImageButton
+                android:id="@+id/mplay"
+                style="@style/Widget.Neumorph.ImageButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+                app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+               android:layout_below="@+id/seekbarcardview"
+
+                android:src="@drawable/pause"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+
+                android:layout_marginTop="19dp"
+                android:layout_centerHorizontal="true"
+                app:neumorph_shapeType="flat" />
+            <soup.neumorphism.NeumorphImageButton
+                android:id="@+id/mback"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+
+                style="@style/Widget.Neumorph.ImageButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+                app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+                android:layout_below="@+id/seekbarcardview"
+
+                android:src="@drawable/rewind"
+                android:layout_marginTop="30dp"
+                android:layout_toLeftOf="@+id/mplay"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphImageButton
+                android:id="@+id/mnext"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+
+                style="@style/Widget.Neumorph.ImageButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:neumorph_shadowColorDark="@color/design_dark_default_color_shadow_dark"
+                app:neumorph_shadowColorLight="@color/design_dark_default_color_shadow_light"
+                android:layout_below="@+id/seekbarcardview"
+
+                android:src="@drawable/back"
+
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/mplay"
+                app:neumorph_shapeType="flat" />
+
+<!--      <me.tankery.lib.circularseekbar.CircularSeekBar-->
+<!--          android:layout_margin="0dp"-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_alignParentBottom="true"-->
+<!--            app:cs_circle_style = "round"-->
+<!--            app:cs_progress = "10"-->
+<!--            app:cs_max = "100"-->
+<!--            app:cs_negative_enabled = "false"-->
+<!--            app:cs_move_outside_circle = "false"-->
+<!--            app:cs_maintain_equal_circle = "true"-->
+<!--            app:cs_use_custom_radii = "true"-->
+<!--            app:cs_lock_enabled = "true"-->
+<!--            app:cs_circle_x_radius = "50dp"-->
+<!--            app:cs_circle_y_radius = "50dp"-->
+<!--            app:cs_circle_stroke_width = "10dp"-->
+<!--            app:cs_disable_pointer = "false"-->
+<!--            app:cs_pointer_stroke_width = "10dp"-->
+<!--            app:cs_pointer_halo_width = "0dp"-->
+<!--            app:cs_pointer_halo_border_width = "0dp"-->
+
+<!--            app:cs_circle_color = "#292626"-->
+<!--            app:cs_circle_progress_color = "@color/gradient"-->
+<!--            app:cs_pointer_color = "@color/white"-->
+<!--            app:cs_pointer_halo_color = "@color/colorShadowLight"-->
+<!--            app:cs_pointer_halo_color_ontouch = "@color/design_dark_default_color_shadow_light"-->
+<!--            app:cs_pointer_alpha_ontouch = "1"-->
+<!--            app:cs_pointer_angle = ""-->
+<!--            app:cs_start_angle = ""-->
+<!--            app:cs_end_angle = ""-->
+<!--/>-->
+
+
+        </RelativeLayout>
+
+</RelativeLayout>
