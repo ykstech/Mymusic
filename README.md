@@ -17,6 +17,7 @@ button
 10) nested scrollview
 11) bottomsheetbar with animation
 12) Neumorphism Design
+13) Notification 
 ## Working 
 
 <img src="https://user-images.githubusercontent.com/85982995/132215828-341ae274-34b7-414b-bb2c-6cd39f97c1b9.png" width="250" height="400"></img> 
@@ -34,3 +35,6 @@ button
 <img src="https://user-images.githubusercontent.com/85982995/132215912-f90ca210-8d23-4fe2-b770-2c8cecdbd8d8.png" width="250" height="400"></img>
 <img src="https://user-images.githubusercontent.com/85982995/132215909-f98dfb9b-a5e2-4942-9d3e-adfbacbbc496.png" width="250" height="400"></img>
 <img src="https://user-images.githubusercontent.com/85982995/132215874-d6d1742f-161f-4baf-9a39-38aea361660e.png" width="250" height="400"></img><br>
+
+## Demo
+<a href="https://youtu.be/CXk_Ls2zH6M" target="_blank" >click on the link to see demo of app</a>
