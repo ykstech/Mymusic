@@ -386,6 +386,7 @@ if(one==0) {
                 NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
                    // changeTextStatus(true);
+                    mediaPlayerm.pause();
                     finish();
                     startActivity(new Intent(getApplicationContext(), download.class));
 
